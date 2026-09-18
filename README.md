@@ -12,15 +12,15 @@ in the link above.
 - The first coding part in this activity is (very loosely) based on a common problem encountered in
 problems posted on https://projecteuler.net/archives which is another interesting source of challenging
 programming problems. You might also recognize that the multiples of 3 and 5 problem from
-last week came from there. If you are looking for challenges, definitely check it out.
+last week's lab came from there. If you are looking for challenges, definitely check it out.
 
-- Partial cake recipes provided by ChatGPT.
+- Cake recipes courtesy MS Copilot
 
 # TASK 0: Fork this repo
 
 > **IMPORTANT!**
 >
->During lab, you should **not** fork directly from https://github.com/CSC207-2025F-UofT/lab2-branching-and-merging.
+>During lab, you should **not** fork directly from https://github.com/CSC207-2026F-UofT/lab2-branching-and-merging.
 Your TA will share a different URL for you to fork from, so that you
 can make pull requests to that repo during Task 3 of the lab.
 If you miss the lab and work on this after, you can use this URL though.
@@ -63,7 +63,7 @@ branch:
   - IntelliJ: `Git -> Merge... -> task_1 -> Merge`
   - Terminal: `git merge task_1`
 
-You should now see the changes that you made are now in the `main` branch.
+You should see that the changes you made are now in the `main` branch.
 
 ---
 
@@ -79,11 +79,12 @@ You should now see the changes that you made are now in the `main` branch.
 
 ---
 
-And that's it for Task 1! You might be wondering about how we are supposed to get _someone else_
-to review and approve our changes _before_ we push our changes to the main branch of
-our remote repository, since everything we just did was local. We'll explore how to do precisely
-that by pushing our *branch* to our remote repository and making a **pull request (PR)** shortly,
-but first, we'll talk about merge conflicts and how to resolve them.
+And that's it for Task 1!
+
+So far, everything we've done has been local. To get someone else to review our changes,
+we'll need to push our branch to the remote repository and create a **pull request (PR)**.
+
+We'll get to that shortly. First, let's look at **merge conflicts** and how to resolve them.
 
 > Tip: In the Git tool window, you can open the `Console` tab to see the underlying git commands it
 is performing when you ask IntelliJ to perform various git operations for you.
@@ -92,7 +93,7 @@ is performing when you ask IntelliJ to perform various git operations for you.
 
 Alice and Bob are planning to bake a cake, but can't agree on which recipe to use. They had
 started working on the recipe in `recipe.md` together, and then they each filled in the details of
-what they felt would make the most delicious cake. To do this, they each made edits to the recipe
+what they felt would make the most delicious layer cake. To do this, they each made edits to the recipe
 on their own branch.
 
 You'll notice that your repository already has two branches called `alice` and `bob`.
@@ -102,10 +103,11 @@ You'll notice that your repository already has two branches called `alice` and `
 - [ ] Attempt to merge the `bob` branch into the `alice` branch using either IntelliJ or the Terminal.
   - You will be prompted to resolve a merge conflict. To do this, you will need to pick and choose which
   parts of each recipe to keep.
-  - Read what either `git` or `IntelliJ` tells you in order to complete the merge process.
-    - If you do the merge through the Terminal, you will need to edit `recipe.md` to remove all of the
-    merge conflict symbols which `git` has added to your file. Once done, you will need to `git add` the
+  - Read what either `Git` or `IntelliJ` tells you in order to complete the merge process.
+    - If you do the merge through the Terminal, you will need to edit `recipe.md` to remove all the
+    merge conflict symbols which `Git` has added to your file. Once done, you will need to `git add` the
     `recipe.md` file and `git commit` to finish the merge.
+    - If you merge using your IDE, you will be given a GUI to resolve the conflicts in the file.
 
 - [ ] Once the merge is complete, delete the `bob` branch.
 
